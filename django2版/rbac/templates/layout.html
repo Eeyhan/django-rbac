@@ -79,7 +79,9 @@
             background: -moz-linear-gradient(center bottom, #efefef 0%, #fafafa 100%);
             background: -o-linear-gradient(bottom, #efefef, #fafafa);
             filter: progid:dximagetransform.microsoft.gradient(startColorStr='#e3e3e3', EndColorStr='#ffffff');
-            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa',EndColorStr='#efefef')";
+            box-shadow: inset 0px 1px 1px white;
+            box-shadow: inset 0px 1px 1px white;
+            box-shadow: inset 0px 1px 1px white;
             box-shadow: inset 0px 1px 1px white;
         }
 
@@ -91,6 +93,12 @@
         .left-menu .menu-body .static-menu a.active {
             color: #2F72AB;
             border-left: 2px solid #2F72AB;
+        }
+		td {
+            max-width: 500px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
     </style>
     {% block css %}
