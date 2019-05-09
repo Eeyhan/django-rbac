@@ -16,10 +16,10 @@ class Permission(models.Model):
     """
     权限表
     """
-    title = models.CharField(verbose_name='标题', max_length=32)
-    url = models.CharField(verbose_name='含正则的URL', max_length=128)
+    title = models.CharField(verbose_name='标题', max_length=256)
+    url = models.CharField(verbose_name='含正则的URL', max_length=256)
 
-    name = models.CharField(verbose_name='URL别名', max_length=32, unique=True)
+    name = models.CharField(verbose_name='URL别名', max_length=256, unique=True)
 
     menu = models.ForeignKey(verbose_name='所属菜单', to='Menu', null=True, blank=True, help_text='null表示不是菜单;非null表示是二级菜单')
 

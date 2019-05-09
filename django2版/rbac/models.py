@@ -34,7 +34,7 @@ class Menu(models.Model):
     """
     一级菜单表
     """
-    title = models.CharField(verbose_name='一级菜单名称', max_length=32)
+    title = models.CharField(verbose_name='一级菜单名称', max_length=256)
     icon = models.CharField(verbose_name='图标', max_length=32, unique=True)
 
     def __str__(self):
@@ -45,9 +45,9 @@ class Permission(models.Model):
     """
     权限
     """
-    title = models.CharField(verbose_name='权限标题', max_length=32)
-    url = models.CharField(verbose_name='含正则的URL', max_length=128)
-    name = models.CharField(verbose_name='URL别名', max_length=32, null=True, blank=True)
+    title = models.CharField(verbose_name='权限标题', max_length=256)
+    url = models.CharField(verbose_name='含正则的URL', max_length=256)
+    name = models.CharField(verbose_name='URL别名', max_length=256, null=True, blank=True)
     menu = models.ForeignKey(to='Menu', on_delete='cascade', verbose_name='所属菜单',
                              null=True, blank=True,
                              help_text='null表示不是菜单;非null表示是二级菜单')
